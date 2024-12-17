@@ -25,6 +25,7 @@ const { technologies, title, img, description, link } = Astro.props;
     <div class="project-technologies">
       {
         technologies?.map(({ icon }) => {
+          if(!icon) return;
           const IconComponent = getIconComponent(icon);
           return <span class="technology-icon">{IconComponent && <IconComponent />}</span>;
         })

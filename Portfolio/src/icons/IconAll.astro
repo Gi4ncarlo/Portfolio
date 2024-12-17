@@ -66,6 +66,6 @@ export const ICONS = {
 };
 
 export function getIconComponent(iconName: string) {
-  return ICONS[iconName] || null;
+  return ICONS[iconName as keyof typeof ICONS] || null;
 }
 ---
