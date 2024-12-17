@@ -1,136 +1,97 @@
----
+--- 
 import { frontSkills, backSkills, tools, training } from "../../../const/const";
 import { getIconComponent } from "../../../icons/IconAll.astro";
 ---
 
 <section class="section-skill">
-  <div class="neon-glow"></div>
+  <div class="neon-overlay"></div>
   <div class="m-auto w-[90%] max-w-[1355px] content-wrapper">
-
+    <!-- Header -->
     <div class="relative lg:max-w-[900px] mt-3">
       <h2 class="text-4xl py-4 title-skills" id="skills">Tecnologías</h2>
-      <p class="text-lg nunito text-[#f1f1f1] opacity-90">A lo largo de mi carrera, he trabajado con diversas tecnologías que me han permitido mejorar mis proyectos y habilidades técnicas.</p>
+      <p class="text-lg nunito text-[#e2e8f0] opacity-90">
+        A lo largo de mi carrera, he trabajado con diversas tecnologías que me han permitido mejorar mis proyectos y habilidades técnicas.
+      </p>
     </div>
 
-    <div class="grid grid-cols-1 grid-rows-4 relative my-6 gap-6 w-full lg:w-[1300px] md:grid-cols-2 md:grid-rows-2 lg:p-10 lg:gap-8 lg:mx-auto">
-      <!-- Frontend Section -->
-      <div class="text-center lg:w-[70%] rounded-lg p-4 m-3 lg:m-6 bg-[#3b82f6]/[0.9] shadow-lg shadow-[#3b82f6] hover:scale-105 hover:shadow-xl hover:shadow-[#3b82f6] transition-all ease-in-out duration-300">
-        <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-[#1e40af] via-[#3b82f6] to-[#60a5fa] text-3xl font-[900] py-5 nunito shadow-md">Frontend</h1>
-        <div class="grid grid-cols-2 grid-rows-2 gap-6 mt-4 w-full p-3 h-[250px] md:w-[270px] lg:w-[350px] lg:grid-cols-3 m-auto lg:px-6">
-          {frontSkills.map(({ icon, title }) => {
-            const IconComponent = getIconComponent(icon);
-            return (
-              <div class="flex flex-col items-center">
-                {IconComponent && <IconComponent class="w-14 h-14 object-contain shadow-md shadow-[#3b82f6]"/>}
-                <p class="text-center mt-2 lg:text-sm text-xs text-[#f6f6f9] opacity-90 nunito">{title}</p>
-              </div>
-            );
-          })}
+    <!-- Grid Sections -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 my-10">
+      <!-- Reusable Section -->
+      {[
+        { title: "Frontend", skills: frontSkills, color: "from-[#f4b4cc] to-[#d87ca1]" },
+        { title: "Backend", skills: backSkills, color: "from-[#98c1d9] to-[#5a95b3]" },
+        { title: "Aprendiendo", skills: training, color: "from-[#b3e0ca] to-[#81c1aa]" },
+        { title: "Herramientas", skills: tools, color: "from-[#fbc490] to-[#e09961]" },
+      ].map(({ title, skills, color }) => (
+        <div class="bg-gradient-to-br {color} rounded-xl shadow-lg hover:shadow-2xl transition-all p-6 text-center group">
+          <h3 class="text-2xl font-bold text-white mb-4 uppercase tracking-wider">{title}</h3>
+          <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
+            {skills.map(({ icon, title }) => {
+              const IconComponent = getIconComponent(icon);
+              return (
+                <div class="flex flex-col items-center transform group-hover:scale-105 transition-all duration-300">
+                  {IconComponent && (
+                    <IconComponent class="w-12 h-12 text-white mb-2 shadow-md group-hover:shadow-lg" />
+                  )}
+                  <p class="text-sm text-[#f9fafb]">{title}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
-    
-      <!-- Backend Section -->
-      <div class="text-center lg:w-[70%] rounded-lg p-4 m-3 lg:m-6 bg-[#ef4444]/[0.9] shadow-lg shadow-[#ef4444] hover:scale-105 hover:shadow-xl hover:shadow-[#ef4444] transition-all ease-in-out duration-300">
-        <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-[#dc2626] via-[#ef4444] to-[#f87171] text-3xl font-[900] py-5 nunito shadow-md">Backend</h1>
-        <div class="grid grid-cols-3 grid-rows-3 gap-6 mt-4 w-full p-3 h-[250px] md:w-[270px] lg:w-[350px] lg:grid-cols-3 lg:grid-rows-3 m-auto lg:px-6">
-          {backSkills.map(({ icon, title }) => {
-            const IconComponent = getIconComponent(icon);
-            return (
-              <div class="flex flex-col items-center">
-                {IconComponent && <IconComponent class="w-14 h-14 object-contain shadow-md shadow-[#ef4444]"/>}
-                <p class="text-center mt-2 lg:text-sm text-xs text-[#f6f6f9] opacity-90 nunito">{title}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    
-      <!-- Aprendiendo Section -->
-      <div class="text-center lg:w-[70%] rounded-lg p-4 m-3 lg:m-6 bg-[#8b5cf6]/[0.9] shadow-lg shadow-[#8b5cf6] hover:scale-105 hover:shadow-xl hover:shadow-[#8b5cf6] transition-all ease-in-out duration-300">
-        <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-[#7c3aed] via-[#8b5cf6] to-[#9d4edd] text-3xl font-[900] py-5 nunito shadow-md">Aprendiendo</h1>
-        <div class="grid grid-cols-2 grid-rows-2 gap-6 mt-4 w-full p-3 h-[250px] md:w-[270px] lg:w-[350px] lg:grid-cols-3 m-auto lg:px-6">
-          {training.map(({ icon, title }) => {
-            const IconComponent = getIconComponent(icon);
-            return (
-              <div class="flex flex-col items-center">
-                {IconComponent && <IconComponent class="w-14 h-14 object-contain shadow-md shadow-[#8b5cf6]"/>}
-                <p class="text-center mt-2 lg:text-sm text-xs text-[#f6f6f9] opacity-90 nunito">{title}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    
-      <!-- Herramientas Section -->
-      <div class="text-center lg:w-[70%] rounded-lg p-4 m-3 lg:m-6 bg-[#f59e0b]/[0.9] shadow-lg shadow-[#f59e0b] hover:scale-105 hover:shadow-xl hover:shadow-[#f59e0b] transition-all ease-in-out duration-300">
-        <h1 class="text-transparent bg-clip-text bg-gradient-to-r from-[#d97706] via-[#f59e0b] to-[#fbbf24] text-3xl font-[900] py-5 nunito shadow-md">Herramientas</h1>
-        <div class="grid grid-cols-2 grid-rows-2 gap-6 mt-4 w-full p-3 h-[250px] md:w-[270px] lg:w-[350px] lg:grid-cols-3 m-auto lg:px-6">
-          {tools.map(({ icon, title }) => {
-            const IconComponent = getIconComponent(icon);
-            return (
-              <div class="flex flex-col items-center">
-                {IconComponent && <IconComponent class="w-14 h-14 object-contain shadow-md shadow-[#f59e0b]"/>}
-                <p class="text-center mt-2 lg:text-sm text-xs text-[#f6f6f9] opacity-90 nunito">{title}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      ))}
     </div>
   </div>
 </section>
 
-
+<!-- Styles -->
 <style>
 .section-skill {
   position: relative;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #1f1f1f, #2a2a2a);
-  overflow: hidden;
+  background: linear-gradient(to bottom, #1e293b, #0f172a);
+  padding: 60px 0;
+  color: #f9fafb;
 }
 
-.neon-glow {
+.neon-overlay {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, #0099ff, #000);
-  filter: blur(60px);
-  opacity: 0.7;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 80%);
+  pointer-events: none;
 }
 
 .content-wrapper {
   position: relative;
-  z-index: 1;
+  z-index: 10;
 }
 
 .title-skills {
-  position: relative;
-  display: block;
-  font-size: 36px;
-  padding: 20px 0;
-  color: #f6f6f9;
-  width: 100%;
-  font-weight: 900;
-  font-family: "Nunito Sans", serif;
-  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: #f8fafc;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.nunito {
-  font-family: "Nunito Sans", serif;
+.bg-gradient-to-br {
+  transition: all 0.3s ease-in-out;
+}
+
+.group:hover .group-hover\:scale-105 {
+  transform: scale(1.05);
+}
+
+.group-hover\:shadow-2xl {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
   .title-skills {
     font-size: 40px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .title-skills {
-    font-size: 48px;
   }
 }
 </style>

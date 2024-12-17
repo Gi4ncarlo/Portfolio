@@ -1,111 +1,127 @@
----
+--- 
 import { studies } from "../../../const/const";
 import certificado1 from "../../../../public/img/FullStackEgg_1.webp";
+import certificado2 from "../../../../public/img/SoyHenry.png";
 import { Image } from "astro:assets";
 ---
 
 <section class="section_studies">
   <div class="m-auto w-[90%] max-w-[1355px] content-wrapper">
-  <div class="linear-grandient-1"></div>
-  <div class="grid grid-cols-1 lg:grid-cols-2 my-3 w-full lg:w-[1300px] lg:p-10 lg:gap-8 lg:mx-auto">
-    <div class="content_studies p-2">
-      <h3 class="title-studies" id="studies">Estudios</h3>
-      <ul class="ul-studies">
-        {
-          studies.map(({ date, title, corporation }) => (
-            <li class="li-studies">
-              <span class="circle" />
-              <div>
-                <h3>{title}</h3>
-                <p>{corporation}</p>
-                <span>{date}</span>
+    <!-- Gradiente de fondo -->
+    <div class="linear-gradient-1"></div>
+
+    <!-- Contenedor principal -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center py-12 relative z-10">
+
+      <!-- Sección de Estudios -->
+      <div class="content_studies text-center lg:text-left p-6 rounded-lg bg-opacity-90 backdrop-blur-sm bg-[#111111]/60 shadow-lg">
+        <h3 class="title-studies" id="studies">Mis Estudios</h3>
+        <ul class="ul-studies space-y-6">
+          {studies.map(({ date, title, corporation }) => (
+            <li class="li-studies group relative">
+              <span class="circle transition-transform group-hover:scale-150"></span>
+              <div class="pl-6 group-hover:text-[#00d9ff] transition-colors duration-300">
+                <h3 class="font-bold text-lg">{title}</h3>
+                <p class="italic">{corporation}</p>
+                <span class="text-sm text-gray-400">{date}</span>
               </div>
             </li>
-          ))
-        }
-      </ul>
+          ))}
+        </ul>
+      </div>
+
+      <!-- Sección de Video -->
+      <div class="relative rounded-lg overflow-hidden shadow-2xl h-full">
+        <video 
+          controls 
+          autoplay 
+          muted 
+          loop 
+          class="w-full h-full object-cover transition-transform hover:scale-105 duration-500"
+        >
+          <source src="../../img/VideoCertificados.mp4" type="video/mp4" />
+          Tu navegador no soporta el formato de video.
+        </video>
+        <!-- Overlay Visual -->
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0099ff] to-transparent opacity-40"></div>
+      </div>
     </div>
-    <div class="relative m-auto">
-      <picture>
-        {/* If you are not using vercel, place a normal <img> tag */}
-        <Image src={certificado1} alt="Cetificado" class="rounded-md shadow-md shadow-[#0099ff]"/>
-      </picture>
-    </div>
-  </div>
   </div>
 </section>
 
 <style>
+  /* Sección Principal */
   .section_studies {
     position: relative;
     width: 100%;
-    height: 100%;
+    background: radial-gradient(circle at center, #000, #111111 70%);
     display: flex;
-    background-color: #111111;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
-  .linear-grandient-1 {
+
+  /* Gradiente decorativo */
+  .linear-gradient-1 {
     position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    /* background: radial-gradient(at left center, rgba(1, 190, 150 , 0.5), transparent , transparent); */
-    background: linear-gradient(to top, #0099fff3, #000);
-    border-top: solid 1px rgba(0,0,0, 0.568);
-    background: ;
+    top: -30%;
+    left: -20%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at top left, rgba(0, 153, 255, 0.3), transparent);
+    filter: blur(120px);
     z-index: 0;
   }
+
+  /* Contenedor Estudios */
   .content_studies {
-    position: relative;
-    z-index: 1;
-    width: 90%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 20px 0;
-    max-width: 1355px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
   }
   .title-studies {
-    font-size: 30px;
-    color: #f6f6f9;
-    text-align: left;
-    width: 100%;
+    font-size: 36px;
+    color: #00d9ff;
     font-weight: 900;
-    padding: 20px 0;
-    font-family: "Nunito Sans", serif;
+    font-family: "Nunito Sans", sans-serif;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.8);
   }
   .ul-studies {
-    padding: 30px 10px;
-    display: flex;
-    flex-direction: column;
+    padding: 0;
+    list-style: none;
   }
   .li-studies {
-    padding: 0px 20px;
-    color: #f6f6f9;
-    border-left: 1px solid #f6f6f9;
-    list-style: none;
     position: relative;
-    padding-bottom: 50px;
-    font-family: "Roboto", serif;
+    border-left: 2px solid #00d9ff;
+    padding-left: 20px;
+    transition: transform 0.3s;
+  }
+  .li-studies:hover {
+    transform: translateX(10px);
   }
   .circle {
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
+    background-color: #00d9ff;
     border-radius: 50%;
-    left: -5px;
-    top: 5px;
-    background-color: #f6f6f9;
+    top: 0.5em;
+    left: -7px;
+    transition: transform 0.3s;
   }
   .li-studies h3 {
-    padding-bottom: 5px;
-    font-weight: 200;
+    font-size: 20px;
+    margin: 0;
   }
   .li-studies p {
-    padding: 5px 0;
+    font-size: 16px;
+    color: #ccc;
+    margin: 4px 0;
   }
   .li-studies span {
-    font-size: 13px;
+    font-size: 14px;
+    color: #888;
   }
 </style>

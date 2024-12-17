@@ -1,30 +1,25 @@
 ---
 import { Image } from "astro:assets";
 import photoperfil from "../../../../public/img/photo-perfil.webp";
+
 ---
 
 <div class="content-presentation">
   <div class="linear-gradient-2"></div>
   <div class="linear-gradient-1"></div>
-  <dir class="container-persentation">
+  <div class="container-persentation">
     <div class="container-text">
-      <!-- <h2 class="text-hello">Hola <strong>soy</strong></h2> -->
-      <h2 class="text-name nunito">Giancarlo Zanarini</h2>
-      <div class="container-profession">
-        <div>
-       <span class="p-profession nunito">DESARROLADOR</span>
-        </div>
-        <div class="">
-          <span class="p-profession nunito">FULL STACK</span>
-        </div>
+      <div class="content-presentation2">
+        <section class="hero-section">
+          <h1 class="hero-title nunito fade-in">Giancarlo Zanarini</h1>
+          <h2 class="hero-subtitle nunito" id="typed-name"></h2>
+        </section>
       </div>
 
       <div class="imgPresentation">
-
         <div class="container-photo-profile m-auto">
           <div class="photo-perfil">
             <picture>
-              {/* If you are not using vercel, place a normal <img> tag */}
               <Image src={photoperfil} alt="Perfil Personal" id="inicio" />
             </picture>
           </div>
@@ -34,57 +29,49 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
           Con más de 2 años de experiencia en la creación de experiencias web
           atractivas y funcionales. Amplio conocimiento en tecnologías front-end, incluyendo
           HTML5, CSS3, JavaScript y frameworks como React, Next.js, Astro, Tailwind. Conocimiento en
-          tecnologias Backend como Java, Nest, Jest y Express.
-  
+          tecnologías Backend como Java, Nest, Jest y Express.
         </p>
+
         <div class="container-curriculum">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giancarlozanarini11@gmail.com" target="_blank" class="a-curriculum">
-             Email
-          </a>  
-          <a
-            href="https://drive.google.com/file/d/1J4ZmP3R9-uff7Yv5ewm8yaqW2jJafzVx/view?usp=sharing"
-            class="a-curriculum"
-            target="_blank">Ver Currículum</a
-          >
+          <a href="mailto:giancarlozanarini11@gmail.com" target="_blank" class="a-curriculum">Email</a>
+          <a href="https://drive.google.com/file/d/1J4ZmP3R9-uff7Yv5ewm8yaqW2jJafzVx/view?usp=sharing" class="a-curriculum" target="_blank">Ver Currículum</a>
         </div>
+
         <div class="container-social">
-          <p class="nunito text-base">Echa un vistaso a mi</p>
+          <p class="nunito text-base">Echa un vistazo a mi</p>
           <a href="https://github.com/Gi4ncarlo" target="_blank">
             <li class="li-social">
               <i class="fa-brands fa-github"></i>
             </li>
           </a>
-          <a
-            href="https://www.linkedin.com/in/giancarlo-zanarini-316684257/"
-            target="_blank"
-          >
+          <a href="https://www.linkedin.com/in/giancarlo-zanarini-316684257/" target="_blank">
             <li class="li-social">
               <i class="fa-brands fa-linkedin"></i>
             </li>
           </a>
         </div>
       </div>
-
-      </div>
-
-  </dir>
+    </div>
+  </div>
 </div>
 
 <script>
+  import Typed from "typed.js";
 
-  const letters = document.querySelectorAll(".p-profesion");
-  letters.forEach((letter) => {
-    letter.addEventListener("mouseenter", () => {
-      toogle(letter);
-    });
+  document.addEventListener("DOMContentLoaded", () => {
+    const options = {
+      strings: ["Full Stack Developer", "Frontender", "Backend Enthusiast", "Creative Problem Solver"],
+      typeSpeed: 60,
+      backSpeed: 30,
+      startDelay: 200,
+      loop: true,
+      showCursor: true,
+      cursorChar: "",
+      contentType: "html",
+    };
+
+    new Typed("#typed-name", options);
   });
-  
-  function toogle(letter : any) {
-    letter.classList.add("bouncing");
-    letter.addEventListener("animationend", () => {
-      letter.classList.remove("bouncing");
-    });
-  }
 </script>
 
 <style>
@@ -137,16 +124,51 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     color: #f6f6f9;
   }
   
-  .text-hello {
-    padding: 10px 0;
-    font-size: 20px;
+  /* Título principal */
+  .hero-title {
+    font-size: 48px;
+    color: #0099ff;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+    font-weight: 800;
   }
 
-  .text-name {
-    padding: 5px 0;
-    font-size: 40px;
-    color: #0099ff;
-    margin-top: 10px;
+  /* Subtítulo animado */
+  .hero-subtitle {
+    font-size: 32px;
+    color: #ffffff;
+    font-weight: 600;
+    min-height: 40px; /* Asegura espacio suficiente para Typed.js */
+  }
+
+  /* Cursor personalizado */
+  .hero-subtitle .typed-cursor {
+    font-size: 32px;
+    font-weight: 600;
+    color: #0099ff; /* Color del cursor */
+    margin-left: 4px; /* Espaciado para corregir la posición */
+  }
+
+  /* Efecto Fade In */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsividad */
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 36px;
+    }
+    .hero-subtitle {
+      font-size: 24px;
+    }
   }
   .container-profession {
     padding: 5px 0;
@@ -157,12 +179,6 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     display: inline-block;
     text-transform: capitalize;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-  }
-
-  .bouncing {
-    transition: 0.8s all;
-    color: #01be96;
-    animation: rubberband 400ms alternate ease-out;
   }
 
   .nunito{
@@ -196,7 +212,7 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     font-size: 19px;
     width: 50%;
     text-align: left;
-    margin: 10px auto
+    margin: 20px auto
   }
 
   .container-curriculum {
@@ -275,8 +291,9 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
   }
 
   .li-social:hover {
-    transform: rotate(-360deg);
-  }
+  transform: rotate(-360deg);
+  will-change: transform;
+}
 
   .container-photo-profile {
     position: relative;
