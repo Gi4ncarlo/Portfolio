@@ -6,7 +6,7 @@ import react from "@astrojs/react";
 export default defineConfig({
   output: "server",
   adapter: vercel({
-    runtime: "nodejs22.x" 
-  }),
+    runtime: "nodejs18.x"  // Especifica el runtime que estás utilizando
+  }),  
   integrations: [tailwind(), react()],
 });
