@@ -1,18 +1,18 @@
 export const studies = [
   {
-    title: "Técnico en desarrollo de software",
-    corporation: "SENA - Montería (Córdoba) ",
-    date: "02/2019 – 12/2019",
+    title: "Ingenieria en Sistemas (No Concluido)",
+    corporation: "UTN (Rosario) ",
+    date: "02/2021 – 2/2023",
   },
   {
-    title: "Desarrollador Front-end React Js",
-    corporation: "Alura Latam - Remoto",
-    date: "04/2023 – 09/2023",
+    title: "Desarrollador Full Stack",
+    corporation: "Egg Corporation - Remoto",
+    date: "01/2022 – 10/2023",
   },
   {
-    title: "Curso profesional de React Js",
-    corporation: "Código facilito - Remoto",
-    date: "04/2023 – 04/2023",
+    title: "Desarrollador Full Stack",
+    corporation: "Soy Henry - Remoto",
+    date: "04/2024 – 12/2024",
   },
 ];
 
@@ -38,10 +38,19 @@ export const IconKeys = {
   nodejs: "nodejs",
   mongodb: "mongodb",
   vite: "vite",
+  express : "express",
+  postgresql : "postgreSql",
+  java : "java",
+  nest : "nest",
+  mysql : "mysql",
+  vscode : "vscode",
+  trello : "trello",
+  python : "python",
   // here add more icon keys
 };
 
-export const skills = [
+
+export const frontSkills = [
   {
     title: "Html",
     icon: IconKeys.html,
@@ -55,10 +64,6 @@ export const skills = [
     icon: IconKeys.javaScript,
   },
   {
-    title: "Astro",
-    icon: IconKeys.astro,
-  },
-  {
     title: "Tailwindcss",
     icon: IconKeys.tailwind,
   },
@@ -70,86 +75,139 @@ export const skills = [
     title: "Next Js",
     icon: IconKeys.nextjs,
   },
-  {
-    title: "Git",
-    icon: IconKeys.git,
-  },
+]
 
+export const backSkills = [
   {
-    title: "Github",
-    icon: IconKeys.github,
+    title : "Java",
+    icon : IconKeys.java
   },
   {
-    title: "Material UI",
-    icon: IconKeys.materialUi,
-  },
-
-  {
-    title: "Redux Js",
-    icon: IconKeys.redux,
+    title : "PostgreSql",
+    icon : IconKeys.postgresql
   },
   {
-    title: "Styled Components",
-    icon: IconKeys.styled,
+    title : "",
+    icon : IconKeys.express
+  },
+  {
+    title : "Nest",
+    icon : IconKeys.nest
   },
   {
     title: "Node Js",
     icon: IconKeys.nodejs,
   },
   {
-    title: "TypeScript",
-    icon: IconKeys.typeScript,
+    title : "TypeScript",
+    icon : IconKeys.typeScript
   },
   {
-    title: "Radix UI",
-    icon: IconKeys.radix,
+    title : "DB",
+    icon : IconKeys.mysql
   },
 
+]
+
+export const tools = [
   {
-    title: "React Query",
-    icon: IconKeys.reactQuery,
+    title: "Git",
+    icon: IconKeys.git,
+  },
+  {
+    title: "Github",
+    icon: IconKeys.github,
   },
   {
     title: "Vite",
     icon: IconKeys.vite,
   },
   {
-    title: "Zustand",
-    icon: IconKeys.zustand,
+    title: "Visual Studio",
+    icon: IconKeys.vscode,
   },
+  {
+    title: "Trello",
+    icon: IconKeys.trello,
+  },
+]
 
+export const training = [
   {
-    title: "Shadcn UI",
-    icon: IconKeys.shadcn,
+    title: "Redux Js",
+    icon: IconKeys.redux,
   },
   {
-    title: "Mongo Db",
-    icon: IconKeys.mongodb,
+    title: "React Query",
+    icon: IconKeys.reactQuery,
   },
-];
+  {
+    title : "Python",
+    icon : IconKeys.python
+  },
+  {
+    title : "Astro",
+    icon : IconKeys.astro
+  },
+  
+]
 
 export const projects = [
   {
-    img: "../../../img/tasks-manager.webp",
-    title: "Tasks Manager",
-    link: "https://task-manager-ecru-chi.vercel.app/dashboard",
-    description: `Administrador de tareas con drag and drop autenticación con Clerk , shadcn.  "En Desarrollo "`,
+    img: "../../public/img/vicnasolPortada.png",
+    title: "Vicnasol Jardineria",
+    link: "https://vicnasol-henry.vercel.app/",
+    description: `Pagina que comunica facilmente clientes con Jardineros, mendiante registro de cuentas y inicio de sesion. Se incluyen funcionalidades en el dashboard dependiendo el rol + metodo de Pago. `,
     technologies: [
       {
         icon: IconKeys.typeScript,
       },
       {
-        icon: IconKeys.nextjs,
+        icon: IconKeys.express,
+      },
+      {
+        icon: IconKeys.postgresql,
+      },
+      {
+        icon: IconKeys.react,
+      },
+      {
+        icon: IconKeys.trello,
       },
       {
         icon: IconKeys.tailwind,
       },
       {
-        icon: IconKeys.zustand,
+        icon: IconKeys.nest,
       },
       {
-        icon: IconKeys.shadcn,
+        icon: IconKeys.github,
       },
+      
+    ],
+  },
+  {
+    img: "../../public/img/BarberiaPortada.png",
+    title: "Barberia del Nonno",
+    link: "https://task-manager-ecru-chi.vercel.app/dashboard",
+    description: `Pagina de Barberia completa, diversos cortes de pelo y precios implementados, al igual que validaciones de registro de usuario e inicio de sesion.`,
+    technologies: [
+      {
+        icon: IconKeys.typeScript,
+      },
+      {
+        icon: IconKeys.express,
+      },
+      {
+        icon: IconKeys.postgresql,
+      },
+      {
+        icon: IconKeys.react,
+      },
+      {
+        icon: IconKeys.redux,
+      },
+      
     ],
   },
   {
@@ -226,93 +284,6 @@ export const projects = [
     technologies: [
       {
         icon: IconKeys.react,
-      },
-      {
-        icon: IconKeys.css,
-      },
-      {
-        icon: IconKeys.javaScript,
-      },
-      {
-        icon: IconKeys.tailwind,
-      },
-    ],
-  },
-  {
-    img: "../../../img/cyberpunk.webp",
-    title: "cyberpunk",
-    link: "https://preeminent-liger-266356.netlify.app/",
-    description: `este proyecto se trata de un clon de la pagína de cyberpunk , donde
-      el ususario puede ver los tailer de él juegos y también los
-      episodios de la serie....`,
-    technologies: [
-      {
-        icon: IconKeys.html,
-      },
-      {
-        icon: IconKeys.css,
-      },
-      {
-        icon: IconKeys.javaScript,
-      },
-    ],
-  },
-
-  {
-    img: "../../../img/fit-nation.webp",
-    title: "gym",
-    link: "https://fitnation.netlify.app/",
-    description: `landing page de una gym por ahora es una landing todavia está en
-              desarrollo la idea es que los usuarios puedan comprar productos de
-              el gym`,
-    technologies: [
-      {
-        icon: IconKeys.react,
-      },
-      {
-        icon: IconKeys.css,
-      },
-      {
-        icon: IconKeys.javaScript,
-      },
-      {
-        icon: IconKeys.tailwind,
-      },
-    ],
-  },
-  {
-    img: "../../../img/spotify.webp",
-    title: "Spotify-Clone",
-    link: "https://www.linkedin.com/posts/osnaider-mart%C3%ADnez_clon-de-la-p%C3%A1gina-de-spotify-echo-con-react-activity-7119712602342965248-upgL?utm_source=share&utm_medium=member_desktop",
-    description: `Clon de la página de Spotify con autenticación de usuario, reproductor de canciones, etc `,
-    technologies: [
-      {
-        icon: IconKeys.react,
-      },
-      {
-        icon: IconKeys.javaScript,
-      },
-      {
-        icon: IconKeys.tailwind,
-      },
-      {
-        icon: IconKeys.redux,
-      },
-      {
-        icon: IconKeys.reactQuery,
-      },
-    ],
-  },
-
-  {
-    img: "../../../img/landing.webp",
-    title: "Landing Realidad Virtual",
-    link: "https://realityvirtual.netlify.app/",
-    description: `landing page de gafas de realidad virtual donde se muestra el
-              producto y como funciona`,
-    technologies: [
-      {
-        icon: IconKeys.astro,
       },
       {
         icon: IconKeys.css,

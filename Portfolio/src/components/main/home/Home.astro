@@ -9,69 +9,77 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
   <dir class="container-persentation">
     <div class="container-text">
       <!-- <h2 class="text-hello">Hola <strong>soy</strong></h2> -->
-      <h2 class="text-name">Osnaider Martinez</h2>
+      <h2 class="text-name nunito">Giancarlo Zanarini</h2>
       <div class="container-profession">
         <div>
-       <span class="p-profession">DESARROLADOR</span>
+       <span class="p-profession nunito">DESARROLADOR</span>
         </div>
         <div class="">
-          <span class="p-profession">FULL STACK</span>
+          <span class="p-profession nunito">FULL STACK</span>
         </div>
       </div>
-      <p class="p-presentation">
-        Con más de 1 año de experiencia en la creación de experiencias web
-        atractivas y funcionales. Experto en tecnologías front-end, incluyendo
-        HTML5, CSS3, JavaScript y frameworks como React, Next.js, Astro. Capaz
-        de traducir diseños creativos en código interactivo y optimizar la
-        velocidad y el rendimiento del sitio web.
-      </p>
-      <div class="container-curriculum">
-        <a href="https://wa.me/+573166026155" target="_blank" class="a-action"
-          >Whatsapp</a
-        >
-        <a
-          href="https://drive.google.com/file/d/1VKgzg5L6JUiRx5d3_kOIjIeQRmthdhM2/view?usp=sharing"
-          class="a-curriculum"
-          target="_blank">Ver Currículum</a
-        >
+
+      <div class="imgPresentation">
+
+        <div class="container-photo-profile m-auto">
+          <div class="photo-perfil">
+            <picture>
+              {/* If you are not using vercel, place a normal <img> tag */}
+              <Image src={photoperfil} alt="Perfil Personal" id="inicio" />
+            </picture>
+          </div>
+        </div>
+
+        <p class="p-presentation font-[Roboto]">
+          Con más de 2 años de experiencia en la creación de experiencias web
+          atractivas y funcionales. Amplio conocimiento en tecnologías front-end, incluyendo
+          HTML5, CSS3, JavaScript y frameworks como React, Next.js, Astro, Tailwind. Conocimiento en
+          tecnologias Backend como Java, Nest, Jest y Express.
+  
+        </p>
+        <div class="container-curriculum">
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=giancarlozanarini11@gmail.com" target="_blank" class="a-curriculum">
+             Email
+          </a>  
+          <a
+            href="https://drive.google.com/file/d/1J4ZmP3R9-uff7Yv5ewm8yaqW2jJafzVx/view?usp=sharing"
+            class="a-curriculum"
+            target="_blank">Ver Currículum</a
+          >
+        </div>
+        <div class="container-social">
+          <p class="nunito text-base">Echa un vistaso a mi</p>
+          <a href="https://github.com/Gi4ncarlo" target="_blank">
+            <li class="li-social">
+              <i class="fa-brands fa-github"></i>
+            </li>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/giancarlo-zanarini-316684257/"
+            target="_blank"
+          >
+            <li class="li-social">
+              <i class="fa-brands fa-linkedin"></i>
+            </li>
+          </a>
+        </div>
       </div>
-      <div class="container-social">
-        <p class="">Echa un vistaso a mi</p>
-        <a href="https://github.com/Osnaider19" target="_blank">
-          <li class="li-social">
-            <i class="fa-brands fa-github"></i>
-          </li>
-        </a>
-        <a
-          href="https://www.linkedin.com/in/osnaider-mart%C3%ADnez-154b67256/"
-          target="_blank"
-        >
-          <li class="li-social">
-            <i class="fa-brands fa-linkedin"></i>
-          </li>
-        </a>
+
       </div>
-    </div>
-    <div class="container-photo-profile">
-      <div class="photo-perfil">
-        <picture>
-          {/* If you are not using vercel, place a normal <img> tag */}
-          <Image src={photoperfil} alt="Osnaider Martinez" id="inicio" />
-        </picture>
-      </div>
-    </div>
+
   </dir>
 </div>
 
 <script>
+
   const letters = document.querySelectorAll(".p-profesion");
   letters.forEach((letter) => {
     letter.addEventListener("mouseenter", () => {
       toogle(letter);
     });
   });
-
-  function toogle(letter) {
+  
+  function toogle(letter : any) {
     letter.classList.add("bouncing");
     letter.addEventListener("animationend", () => {
       letter.classList.remove("bouncing");
@@ -93,12 +101,13 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     height: 520px;
     background: radial-gradient(
       at left center,
-      rgba(1, 190, 150, 0.5),
+      #0099ff,
       transparent,
       transparent
     );
     z-index: 0;
   }
+  
   .linear-gradient-2 {
     position: absolute;
     right: 0;
@@ -107,7 +116,7 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     height: 100%;
     background: radial-gradient(
       at right center,
-      rgba(1, 190, 150, 0.6),
+      #0099ff,
       rgb(0, 0, 0),
       rgb(0, 0, 0)
     );
@@ -124,10 +133,10 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     max-width: 1355px;
   }
   .container-text {
-    position: relative;
-    width: 50%;
+    text-align:center;
     color: #f6f6f9;
   }
+  
   .text-hello {
     padding: 10px 0;
     font-size: 20px;
@@ -135,20 +144,16 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
 
   .text-name {
     padding: 5px 0;
-    font-size: 30px;
-    color: #01be96;
-    font-weight: 800;
-    letter-spacing: 1px;
-    margin-top: 30px;
+    font-size: 40px;
+    color: #0099ff;
+    margin-top: 10px;
   }
   .container-profession {
-    cursor: pointer;
     padding: 5px 0;
   }
   .p-profession {
     font-size: 30px;
     font-weight: 800;
-    cursor: pointer;
     display: inline-block;
     text-transform: capitalize;
     /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
@@ -158,6 +163,11 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     transition: 0.8s all;
     color: #01be96;
     animation: rubberband 400ms alternate ease-out;
+  }
+
+  .nunito{
+    font-family: "Nunito Sans", Serif;
+    font-weight: 900;
   }
 
   @keyframes rubberband {
@@ -184,8 +194,9 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
   .p-presentation {
     padding: 12px 0;
     font-size: 19px;
-    width: 90%;
+    width: 50%;
     text-align: left;
+    margin: 10px auto
   }
 
   .container-curriculum {
@@ -201,11 +212,13 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     align-items: center;
     padding: 10px 30px;
     border: 1px solid #01be96;
+    border-radius:3px;
     font-size: 18px;
     background-color: #01be96;
     text-decoration: none;
     color: #f6f6f9;
     transition: 0.3s;
+    font-family: "Nunito Sans", sans-serif;
   }
   .a-action:hover {
     transform: translateX(4px);
@@ -218,14 +231,16 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     align-items: center;
     padding: 10px 30px;
     color: #f6f6f9;
-    border: 1px solid #01be96;
+    border: 1px solid #0099ff;
+    border-radius:3px;
     font-size: 18px;
     text-decoration: none;
+    font-family: "Nunito Sans", sans-serif;
     transition: 0.3s;
   }
 
   .a-curriculum:hover {
-    background-color: rgba(1, 190, 150, 0.3);
+    background-color: #0099ff;
     transform: translateX(4px);
   }
 
@@ -245,7 +260,7 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
   .li-social {
     position: relative;
     list-style: none;
-    background-color: #01be96;
+    background-color: #0099ff;
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     display: flex;
     justify-content: center;
@@ -278,7 +293,6 @@ import photoperfil from "../../../../public/img/photo-perfil.webp";
     height: 300px;
     width: 300px;
     margin-top: 30px;
-    margin-left: 110px;
     border-radius: 50%;
     z-index: 10;
     background: rgba(255, 255, 255, 0.2);

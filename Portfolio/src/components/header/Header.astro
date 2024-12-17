@@ -1,3 +1,7 @@
+---
+
+---
+
 <header class="header">
   <h1 id="inicio">Portafolio</h1>
   <nav class="nav">
@@ -13,7 +17,7 @@
       <a href="#skills">
         <li class="li-nav">Habilidades</li>
       </a>
-      <a href="#estudios">
+      <a href="#studies">
         <li class="li-nav">Estudios</li>
       </a>
       <a href="#sobremi">
@@ -73,11 +77,15 @@
     overflow: hidden;
     max-width: 1355px;
     margin: 0 auto;
+    font-family: 'Poppins', sans-serif; /* Fuente para la cabecera */
   }
   .header h1 {
     display: inline-block;
     position: relative;
     z-index: 20;
+    font-family: 'Nunito Sans', serif; /* Fuente para el título */
+    font-weight: 900;
+    font-size: 28px;
   }
   .nav {
     position: relative;
@@ -85,15 +93,16 @@
     justify-content: space-between;
     align-items: center;
     color: #f6f6f9;
+    font-family: 'Poppins', sans-serif; /* Fuente para la navegación */
   }
   .ul-nav {
     position: relative;
     display: flex;
   }
-
   .ul-nav a {
     text-decoration: none;
     color: #f6f6f9;
+    font-family: 'Poppins', sans-serif;
   }
   .li-nav {
     position: relative;
@@ -103,13 +112,15 @@
     margin: 0 10px;
     padding: 4px 2px;
     text-align: center;
+    font-family: 'Poppins', sans-serif; /* Fuente para los elementos del menú */
+    font-weight: 500;
   }
   .li-nav::before {
     content: "";
     position: absolute;
     height: 2px;
     width: 0%;
-    background-color: #01be96;
+    background-color: #0099ff;
     bottom: -3px;
   }
   .li-nav:hover::before {
@@ -117,18 +128,15 @@
     transition: 0.4s;
   }
   .li-nav:hover {
-    color: #01be96;
+    color: #0099ff;
   }
-
   .container-bnt-menu {
     display: none;
   }
-
   .menu-drop {
     display: none;
   }
-  /* resposive */
-
+  /* responsive */
   @media (max-width: 720px) {
     .menu-drop {
       display: block;
@@ -139,15 +147,11 @@
     .header {
       position: fixed;
       display: flex;
-
       justify-items: center;
       justify-content: space-between;
       top: 0;
       left: 0;
       z-index: 100;
-      /* background: rgba(255,255,255,0.1);
-        -webkit-backdrop-filter: blur(3px);
-        backdrop-filter: blur(3px); */
     }
     h1 {
       display: inline-block;
@@ -162,7 +166,7 @@
       position: relative;
       height: 2px;
       width: 40px;
-      background-color: #f6f6f9;
+      background-color: #0099ff;
       top: -5px;
       margin-top: 10px;
       cursor: pointer;
@@ -189,25 +193,24 @@
       top: 80px;
       transition: right 0.4s ease-in-out;
       z-index: 100;
+      font-family: 'Poppins', sans-serif; /* Fuente para la navegación en móvil */
     }
-
     .li-nav {
       padding: 30px 80px;
       text-align: center;
       width: 100%;
       margin: 0;
-      
+      font-weight: 500; /* Fuente ajustada en móvil */
     }
     .li-nav:hover {
-      background-color: #01be96;
-      color : #000
+      background-color: #0099ff;
+      color: #fff;
     }
     .li-nav:hover::before {
       content: "";
       width: 0;
       height: 0;
     }
-
     .menu-activado {
       right: 0px;
       transition: right 0.4s ease-in-out;
@@ -232,3 +235,4 @@
     }
   }
 </style>
+
