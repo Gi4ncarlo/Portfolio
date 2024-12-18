@@ -4,8 +4,6 @@ import vercel from "@astrojs/vercel/serverless";
 
 import tailwind from "@astrojs/tailwind";
 
-import react from "@astrojs/react";
-
 // If you are not going to use vercel analytics you can delete the analytics
 // If you want to remove vercel from your project you can do npm uninstall vercel
 export default defineConfig({
@@ -17,7 +15,7 @@ export default defineConfig({
     },
   }),
 
-  integrations: [tailwind(), react()],
+  integrations: [tailwind()],
 });
 
 //If you don't have vercel the configuration will be empty
