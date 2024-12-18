@@ -1,9 +1,11 @@
 import { defineConfig } from "astro/config";
-import vercel from "@astrojs/vercel/static";
-import tailwind from "@astrojs/tailwind";
+import vercel from "@astrojs/vercel/serverless";
 
 export default defineConfig({
-  output: "static", // Cambia "server" a "static"
+  output: "server",
   adapter: vercel(),
-  integrations: [tailwind()],
+  integrations: [],
+  vite: {
+    logLevel: "debug",
+  },
 });
