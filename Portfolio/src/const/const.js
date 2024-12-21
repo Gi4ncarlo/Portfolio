@@ -154,7 +154,7 @@ export const training = [
 
 export const projects = [
   {
-    img: "../../public/img/vicnasolPortada.png",
+    img: "/img/vicnasolPortada.webp",
     title: "Vicnasol Jardineria",
     link: "https://vicnasol-henry.vercel.app/",
     description: `Pagina que comunica facilmente clientes con Jardineros, mendiante registro de cuentas y inicio de sesion. Se incluyen funcionalidades en el dashboard dependiendo el rol + metodo de Pago. `,
@@ -187,7 +187,7 @@ export const projects = [
     ],
   },
   {
-    img: "../../public/img/BarberiaPortada.png",
+    img: "/img/BarberiaPortada.webp",
     title: "Barberia del Nonno",
     link: "https://task-manager-ecru-chi.vercel.app/dashboard",
     description: `Pagina de Barberia completa, diversos cortes de pelo y precios implementados, al igual que validaciones de registro de usuario e inicio de sesion.`,
@@ -212,87 +212,41 @@ export const projects = [
   },
   {
     img: "../../../img/ecommerce-stripe-2.webp",
-    title: "Ecommerce Stripe",
-    link: "https://ecommerce-stripe-763m.vercel.app/",
-    description: `Proyecto FullStack de un ecommerce con pasarela de pagos stripe integrada, destalles de el product etc.  `,
+    title: "Cinemania",
+    link: "https://github.com/Gi4ncarlo/Cinemania-Proyect",
+    description: `Proyecto FullStack de Peliculas, con funcionalidades para agregar nuevas peliculas.  `,
     technologies: [
       {
-        icon: IconKeys.typeScript,
+        icon: IconKeys.javaScript,
       },
       {
-        icon: IconKeys.nextjs,
-      },
-      {
-        icon: IconKeys.tailwind,
+        icon: IconKeys.css,
       },
       {
         icon: IconKeys.mongodb,
       },
       {
-        icon: IconKeys.stripe,
+        icon: IconKeys.html,
       },
     ],
   },
   {
     img: "../../../img/nexanime.webp",
-    title: "NexAnime",
-    link: "https://nexanime.vercel.app",
-    description: `plataforma de anime para ver los animes en tendencia , más valorados , estadísticas.`,
+    title: "Eccomerce Backend",
+    link: "https://github.com/Gi4ncarlo/DeployBackendProyect",
+    description: `Proyecto enfocado al Backend, usando Node Js y Express, con funcionalidades para agregar, modificar y eliminar productos. `,
     technologies: [
       {
         icon: IconKeys.typeScript,
       },
       {
-        icon: IconKeys.nextjs,
+        icon: IconKeys.nest,
       },
       {
-        icon: IconKeys.tailwind,
-      },
-    ],
-  },
-  {
-    img: "../../../img/store-games.webp",
-    title: "Store games",
-    link: "https://store-games-site.netlify.app/",
-    description: `Simulando una página de juegos , consumiendo la API de rawg api
-      donde los usuarios pueden buscar videojuegos, ver sus detalles como
-      creadores , calificaciones,tiendas donde comprar.....`,
-    technologies: [
-      {
-        icon: IconKeys.react,
+        icon: IconKeys.express
       },
       {
-        icon: IconKeys.css,
-      },
-      {
-        icon: IconKeys.javaScript,
-      },
-      {
-        icon: IconKeys.tailwind,
-      },
-      {
-        icon: IconKeys.reactQuery,
-      },
-    ],
-  },
-  {
-    img: "../../../img/movie.webp",
-    title: "Movie Tv",
-    link: "https://movietvsite.netlify.app/",
-    description: `simulando una página de películas , consumiendo la API de themovietv
-              donde los usuarios pueden buscar películas y ver trailer.....`,
-    technologies: [
-      {
-        icon: IconKeys.react,
-      },
-      {
-        icon: IconKeys.css,
-      },
-      {
-        icon: IconKeys.javaScript,
-      },
-      {
-        icon: IconKeys.tailwind,
+        icon: IconKeys.postgresql
       },
     ],
   },
