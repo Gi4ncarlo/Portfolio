@@ -213,7 +213,7 @@ export const projects = [
     ],
   },
   {
-    img: "../../../img/ecommerce-stripe-2.webp",
+    img: "../../../img/CinemaniaPortada.webp",
     title: "Cinemania",
     link: "https://github.com/Gi4ncarlo/Cinemania-Proyect",
     link2 : "https://cinemania-proyect.vercel.app/",

@@ -1,20 +1,34 @@
---- 
+---
 import { studies } from "../../../const/const";
-import certificado1 from "../../../../public/img/FullStackEgg_1.webp";
-import certificado2 from "../../../../public/img/SoyHenry.png";
-import { Image } from "astro:assets";
+
+// AOS necesita ejecutarse en el cliente
+import 'aos/dist/aos.css';
 ---
 
-<section class="section_studies">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" is:raw></script>
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+<script>
+  // Inicializar AOS después de que se cargue el cliente
+  if (typeof window !== "undefined") {
+    import("aos").then((AOS) => {
+      AOS.init();
+    });
+  }
+</script>
+
+<section class="section_studies" data-aos="fade-up" data-aos-duration="1000">
   <div class="m-auto w-[90%] max-w-[1355px] content-wrapper">
     <!-- Gradiente de fondo -->
     <div class="linear-gradient-1"></div>
 
     <!-- Contenedor principal -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center justify-center py-12 relative z-10">
-
       <!-- Sección de Estudios -->
-      <div class="content_studies text-center lg:text-left p-6 rounded-lg bg-opacity-90 backdrop-blur-sm bg-[#111111]/60 shadow-lg">
+      <div 
+        class="content_studies text-center lg:text-left p-6 rounded-lg bg-opacity-90 backdrop-blur-sm bg-[#111111]/60 shadow-lg" 
+        data-aos="fade-right" 
+        data-aos-duration="1200">
         <h3 class="title-studies" id="studies">Mis Estudios</h3>
         <ul class="ul-studies space-y-6">
           {studies.map(({ date, title, corporation }) => (
@@ -23,7 +37,7 @@ import { Image } from "astro:assets";
               <div class="pl-6 group-hover:text-[#00d9ff] transition-colors duration-300">
                 <h3 class="font-bold text-lg">{title}</h3>
                 <p class="italic">{corporation}</p>
-                <span class="text-sm text-gray-400">{date}</span>
+                <span class="text-sm text-red-500">{date}</span>
               </div>
             </li>
           ))}
@@ -31,7 +45,10 @@ import { Image } from "astro:assets";
       </div>
 
       <!-- Sección de Video -->
-      <div class="relative rounded-lg overflow-hidden shadow-2xl h-full">
+      <div 
+        class="relative rounded-lg overflow-hidden shadow-2xl h-full" 
+        data-aos="fade-left" 
+        data-aos-duration="1200">
         <video 
           controls 
           autoplay 
@@ -54,7 +71,7 @@ import { Image } from "astro:assets";
   .section_studies {
     position: relative;
     width: 100%;
-    background: radial-gradient(circle at center, #000, #111111 70%);
+    background: radial-gradient(circle at left, #000, #0099ff 30%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +103,7 @@ import { Image } from "astro:assets";
     font-weight: 900;
     font-family: "Nunito Sans", sans-serif;
     margin-bottom: 20px;
-    text-shadow: 0 0 10px rgba(0, 217, 255, 0.8);
+    text-shadow: 0 0 10px rgba(0, 217, 255, 0.205);
   }
   .ul-studies {
     padding: 0;
@@ -100,6 +117,7 @@ import { Image } from "astro:assets";
   }
   .li-studies:hover {
     transform: translateX(10px);
+    cursor: pointer;
   }
   .circle {
     position: absolute;
@@ -122,6 +140,6 @@ import { Image } from "astro:assets";
   }
   .li-studies span {
     font-size: 14px;
-    color: #888;
+    color: #c9c9c9;
   }
 </style>

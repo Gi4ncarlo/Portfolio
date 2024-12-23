@@ -6,20 +6,25 @@ import Project from "./Project.astro";
 <section class="section-projects">
   <div class="linear-grandient-1"></div>
   <div class="container-projects shadow-lg rounded-lg">
-    <h2 class="title-projects" id="proyectos">Proyectos</h2>
+    <h2 class="text-4xl py-4 title-projects" id="proyectos">Proyectos</h2>
+    <p class="text-lg nunito text-[#e2e8f0] opacity-90">
+      Algunos de mis principales proyectos.
+    </p>
     <div>
       <ul class="ul-projects">
         {
-          projects.map(({ description, img, link, technologies, title, link2 }) => (
-            <Project
-              img={img}
-              description={description}
-              link={link}
-              link2={link2}
-              title={title}
-              technologies={technologies}
-            />
-          ))
+          projects.map(
+            ({ description, img, link, technologies, title, link2 }) => (
+              <Project
+                img={img}
+                description={description}
+                link={link}
+                link2={link2}
+                title={title}
+                technologies={technologies}
+              />
+            )
+          )
         }
       </ul>
     </div>
@@ -41,6 +46,7 @@ import Project from "./Project.astro";
     position: relative;
     background-color: #111111;
     overflow: hidden;
+    padding-top: 2rem;
   }
 
   .container-projects {
@@ -50,15 +56,11 @@ import Project from "./Project.astro";
     max-width: 1355px;
   }
   .title-projects {
-    position: relative;
-    display: block;
-    font-size: 27px;
-    padding: 20px 0;
-    color: #f6f6f9;
-    width: 100%;
-    font-weight: 900;
-    scroll-margin-top: 80px;
-    font-family: "Nunito Sans", serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #f8fafc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   .ul-projects {
