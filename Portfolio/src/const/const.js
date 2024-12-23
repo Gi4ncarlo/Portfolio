@@ -156,7 +156,8 @@ export const projects = [
   {
     img: "/img/vicnasolPortada.webp",
     title: "Vicnasol Jardineria",
-    link: "https://vicnasol-henry.vercel.app/",
+    link: "https://github.com/Gi4ncarlo/ProyectoFinal-Henry",
+    link2: "https://vicnasol-henry.vercel.app/",
     description: `Pagina que comunica facilmente clientes con Jardineros, mendiante registro de cuentas y inicio de sesion. Se incluyen funcionalidades en el dashboard dependiendo el rol + metodo de Pago. `,
     technologies: [
       {
@@ -189,7 +190,8 @@ export const projects = [
   {
     img: "/img/BarberiaPortada.webp",
     title: "Barberia del Nonno",
-    link: "https://task-manager-ecru-chi.vercel.app/dashboard",
+    link: "https://github.com/Gi4ncarlo/BarberiaDelNonno",
+    link2: "https://barberia-del-nonno-dyis.vercel.app/",
     description: `Pagina de Barberia completa, diversos cortes de pelo y precios implementados, al igual que validaciones de registro de usuario e inicio de sesion.`,
     technologies: [
       {
@@ -214,6 +216,7 @@ export const projects = [
     img: "../../../img/ecommerce-stripe-2.webp",
     title: "Cinemania",
     link: "https://github.com/Gi4ncarlo/Cinemania-Proyect",
+    link2 : "https://cinemania-proyect.vercel.app/",
     description: `Proyecto FullStack de Peliculas, con funcionalidades para agregar nuevas peliculas.  `,
     technologies: [
       {
@@ -234,6 +237,7 @@ export const projects = [
     img: "../../../img/nexanime.webp",
     title: "Eccomerce Backend",
     link: "https://github.com/Gi4ncarlo/DeployBackendProyect",
+    link2: "",
     description: `Proyecto enfocado al Backend, usando Node Js y Express, con funcionalidades para agregar, modificar y eliminar productos. `,
     technologies: [
       {
