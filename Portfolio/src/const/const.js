@@ -157,7 +157,7 @@ export const projects = [
     img: "/img/vicnasolPortada.webp",
     title: "Vicnasol Jardineria",
     link: "https://github.com/Gi4ncarlo/ProyectoFinal-Henry",
-    link2: "https://vicnasol-henry.vercel.app/",
+    link2: "https://pleasing-harmony-production.up.railway.app/",
     description: `Pagina que comunica facilmente clientes con Jardineros, mendiante registro de cuentas y inicio de sesion. Se incluyen funcionalidades en el dashboard dependiendo el rol + metodo de Pago. `,
     technologies: [
       {
@@ -234,7 +234,7 @@ export const projects = [
     ],
   },
   {
-    img: "../../../img/nexanime.webp",
+    img: "../../../img/swagger_ui.webp",
     title: "Eccomerce Backend",
     link: "https://github.com/Gi4ncarlo/DeployBackendProyect",
     link2: "",
@@ -251,6 +251,27 @@ export const projects = [
       },
       {
         icon: IconKeys.postgresql
+      },
+    ],
+  },
+  {
+    img: "../../../img/homeFixPortada.webp",
+    title: "Eccomerce Full Stack Java",
+    link: "https://github.com/Educarri/ProFinalServ",
+    link2: "https://www.youtube.com/watch?v=uqXup56pJ9g",
+    description: `Proyecto full stack usando Java, el problema a resolver fue la contratacion de servicios para el hogar de manera rapida y efectiva. `,
+    technologies: [
+      {
+        icon: IconKeys.java,
+      },
+      {
+        icon: IconKeys.mysql,
+      },
+      {
+        icon: IconKeys.html
+      },
+      {
+        icon: IconKeys.css
       },
     ],
   },

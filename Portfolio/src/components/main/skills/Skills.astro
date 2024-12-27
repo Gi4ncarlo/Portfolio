@@ -1,13 +1,16 @@
 --- 
 import { frontSkills, backSkills, tools, training } from "../../../const/const";
 import { getIconComponent } from "../../../icons/IconAll.astro";
----
 
-<section class="section-skill">
+if (typeof window !== "undefined") {
+  import("aos").then(AOS => AOS.init({ duration: 1000, once: true }));
+}
+---
+<section class="section-skill" data-aos="fade-up">
   <div class="neon-overlay"></div>
   <div class="m-auto w-[90%] max-w-[1355px] content-wrapper">
     <!-- Header -->
-    <div class="relative lg:max-w-[900px] mt-3">
+    <div class="relative lg:max-w-[900px] mt-3" data-aos="fade-right">
       <h2 class="text-4xl py-4 title-skills" id="skills">Tecnologías</h2>
       <p class="text-lg nunito text-[#e2e8f0] opacity-90">
         A lo largo de mi carrera, he trabajado con diversas tecnologías que me han permitido mejorar mis proyectos y habilidades técnicas.
@@ -16,14 +19,16 @@ import { getIconComponent } from "../../../icons/IconAll.astro";
 
     <!-- Grid Sections -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 my-10">
-      <!-- Reusable Section -->
-      {[
-        { title: "Frontend", skills: frontSkills, color: "from-[#f4b4cc] to-[#d87ca1]" },
-        { title: "Backend", skills: backSkills, color: "from-[#98c1d9] to-[#5a95b3]" },
-        { title: "Aprendiendo", skills: training, color: "from-[#b3e0ca] to-[#81c1aa]" },
-        { title: "Herramientas", skills: tools, color: "from-[#fbc490] to-[#e09961]" },
-      ].map(({ title, skills, color }) => (
-        <div class="bg-gradient-to-br {color} rounded-xl shadow-lg hover:shadow-2xl transition-all p-6 text-center group">
+      {[{
+        title: "Frontend", skills: frontSkills, color: "from-[#f4b4cc] to-[#d87ca1]" 
+      }, {
+        title: "Backend", skills: backSkills, color: "from-[#98c1d9] to-[#5a95b3]" 
+      }, {
+        title: "Aprendiendo", skills: training, color: "from-[#b3e0ca] to-[#81c1aa]" 
+      }, {
+        title: "Herramientas", skills: tools, color: "from-[#fbc490] to-[#e09961]"
+      }].map(({ title, skills, color }) => (
+        <div class="bg-gradient-to-br {color} rounded-xl shadow-lg hover:shadow-2xl transition-all p-6 text-center group" data-aos="fade-up">
           <h3 class="text-2xl font-bold text-white mb-4 uppercase tracking-wider">{title}</h3>
           <div class="grid grid-cols-2 gap-4 lg:grid-cols-3">
             {skills.map(({ icon, title }) => {
