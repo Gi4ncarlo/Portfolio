@@ -154,6 +154,33 @@ export const training = [
 
 export const projects = [
   {
+    img: "/img/timerPersonalPortada.png",
+    title: "Timer Personal",
+    link: "https://github.com/Gi4ncarlo/TimerPersonal",
+    link2: "https://timer-personal.vercel.app/dashboard",
+    description: `Calculador de tiempo personal, un proyecto donde el usuario registra sus actividades diarias sea "positivas" que "negativas" y puede ver dinamicamente su progreso en disciplina y constancia. Competir con otros usuarios, obtener recompensas y mas.`,
+    technologies: [
+      {
+        icon: IconKeys.typeScript,
+      },
+      {
+        icon: IconKeys.nextjs,
+      },
+      {
+        icon: IconKeys.tailwind,
+      },
+      {
+        icon: IconKeys.shadcn,
+      },
+      {
+        icon: IconKeys.postgresql,
+      },
+      {
+        icon: IconKeys.nodejs,
+      },
+    ],
+  },
+  {
     img: "/img/vicnasolPortada.webp",
     title: "Vicnasol Jardineria",
     link: "https://github.com/Gi4ncarlo/ProyectoFinal-Henry",
