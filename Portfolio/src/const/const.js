@@ -154,6 +154,33 @@ export const training = [
 
 export const projects = [
   {
+    img: "/img/finanzasPersonalesPortada.png",
+    title: "Finanzas Personales",
+    link: "https://github.com/Gi4ncarlo/Finanzas-Personales",
+    link2: "",
+    description: `Proyecto de gestión financiera personal diseñado para ayudar a los usuarios a organizar sus gastos automáticos, compras, ingresos e inversiones, además de permitir la planificación de compras futuras.`,
+    technologies: [
+      {
+        icon: IconKeys.typeScript,
+      },
+      {
+        icon: IconKeys.react,
+      },
+      {
+        icon: IconKeys.tailwind,
+      },
+      {
+        icon: IconKeys.nodejs,
+      },
+      {
+        icon: IconKeys.postgresql,
+      },
+      {
+        icon: IconKeys.express,
+      },
+    ],
+  },
+  {
     img: "/img/timerPersonalPortada.png",
     title: "Timer Personal",
     link: "https://github.com/Gi4ncarlo/TimerPersonal",
